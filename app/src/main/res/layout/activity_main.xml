@@ -36,4 +36,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         android:textAllCaps= "false" />
 
+    <Button
+        android:id="@+id/builderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="0dp"
+        android:text="Builder Button"
+        app:layout_constraintRight_toLeftOf="@+id/moodButton"
+        app:layout_constraintTop_toTopOf="@+id/moodButton" />
+
 </android.support.constraint.ConstraintLayout>

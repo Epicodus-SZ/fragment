@@ -13,8 +13,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     @Bind(R.id.moodButton) Button mMoodButton;
-    @Bind(R.id.textView) TextView mAppNameTextView;
-
+    @Bind(R.id.builderButton) Button mBuilderButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        mBuilderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getFragmentManager();
+                BuilderDialog builderDialogFragment = new BuilderDialog();
+                builderDialogFragment.show(fm, "Builder Fragment");
+            }
+        });
     }
 
 
