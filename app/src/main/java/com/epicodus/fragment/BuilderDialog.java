@@ -4,6 +4,7 @@ package com.epicodus.fragment;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -24,6 +25,9 @@ public class BuilderDialog extends DialogFragment {
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(getActivity(), "You answered YES", Toast.LENGTH_LONG).show();
                 dismiss();
+                FragmentManager fm = getFragmentManager();
+                MoodDialogFragment moodDialogFragment = new MoodDialogFragment();
+                moodDialogFragment.show(fm, "Sample Fragment");
             }
         });
 
